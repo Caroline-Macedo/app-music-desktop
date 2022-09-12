@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../assets/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: grid;
+  place-content: center;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: url(../../assets/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+.card h3,
+.card h5,
+.card p,
+.card a {
+  font-family: "red hat Display", sans-serif;
+}
+
+.card {
+  background-color: white;
+  text-align: center;
+  border-radius: 2rem;
+  overflow: hidden;
+  max-width: 35rem;
+}
+
+.card__img {
+  background: url("../../assets/illustration-hero.svg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 22rem;
+}
+
+.card__content {
+  padding: 3.06rem;
+}
+
+.card__title {
+  color: hsl(223deg, 47%, 23%);
+  font-size: 1.76rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.card__paragraph {
+  color: hsl(224deg, 23%, 55%);
+  font-size: 1.76rem;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 2rem;
+}
+
+.card__plan {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding-block: 1.6rem;
+  padding-inline: 1.2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.card__plan .card__plan__content {
+  justify-self: start;
+}
+.card__plan h5 {
+  color: hsl(223deg, 47%, 23%);
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+.card__plan p {
+  color: hsl(224deg, 23%, 55%);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.card__plan a {
+  color: hsl(224deg, 23%, 55%);
+  font-size: 1.44rem;
+  font-weight: 900;
+  grid-column: 3/4;
+}
+
+.btn__primary {
+  background-color: hsl(245deg, 75%, 52%);
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-block: 1.6rem;
+  border-radius: 1.2rem;
+  box-shadow: 0.2rem 0.9rem 2rem hsla(224deg, 39%, 60%, 0.00541);
+}
+.btn__primary:hover {
+  background-color: hsl(245deg, 83%, 68%);
+}
+
+.btn__secundary {
+  display: block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 900;
+  color: hsl(224deg, 23%, 55%);
+  margin-block: 2rem;
+}
+.btn__secundary:hover {
+  color: hsl(223deg, 47%, 23%);
+}
+
+@media (min-width: 600px) {
+  .card {
+    max-width: 45rem;
+  }
+}/*# sourceMappingURL=style.css.map */

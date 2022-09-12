@@ -1,0 +1,98 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+.card h3,
+.card h5,
+.card p,
+.card a{
+    font-family: $text-family;
+}
+.card{
+    background-color: white;
+    text-align: center;
+    border-radius: $space *10;
+    overflow: hidden;
+    max-width: 35rem;
+}
+
+.card__img{
+    background: url('../../assets/illustration-hero.svg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 22rem;
+}
+
+.card__content{
+    padding: $space *15.3;
+}
+
+.card__title{
+    @include card_text($dark-blue, $text-size * 1.1, 500);
+    margin-bottom: $space *10;
+}
+
+.card__paragraph{
+    @include card_text($desatured-blue, $text-size * 1.1, 500);
+    line-height: 150%;
+    margin-bottom: $space *10;
+}
+
+.card__plan{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding-block: $space *8;
+    padding-inline: $space *6;
+    border-radius: $space *5;
+    margin-bottom: $space *10;
+    align-items: center;
+
+        .card__plan__content{
+            justify-self: start;
+        }
+
+        h5{
+            @include card_text($dark-blue, $text-size, 900);
+            margin-bottom: $space *2;
+        }
+
+        p{
+            @include card_text($desatured-blue, $text-size, 500)
+        }
+
+        a{
+            @include card_text($desatured-blue, $text-size * .9, 900);
+            grid-column: 3/4;
+            @include btn_hover (link)
+        }
+}
+
+.btn__primary{
+    background-color: $satured-blue;
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: $text-size;
+    font-weight: 700;
+    padding-block: $space *8;
+    border-radius: $space *6;
+    box-shadow: .2rem .9rem 2rem hsla(224, 39%, 60%, 0.541%);
+
+    @include btn_hover(primary);
+}
+
+.btn__secundary{
+    display: block;
+    font-size: $text-size;
+    text-decoration: none;
+    font-weight: 900;
+    color: $desatured-blue;
+    margin-block: $space *10;
+    @include btn_hover(secundary);
+}
+
+@media(min-width:600px){
+    .card{
+        max-width: 45rem;
+    }
+}

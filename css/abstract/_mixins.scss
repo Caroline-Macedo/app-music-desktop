@@ -1,0 +1,27 @@
+@import 'variables';
+
+@mixin card_text ($color, $size, $weight: inicial) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+
+@mixin btn_hover ($btn-type) {
+    @if $btn-type==primary{
+        &:hover{
+            background-color: $hover-color;
+        }
+    }@else if $btn-type==secundary{
+        &:hover{
+            color:$dark-blue;
+        }
+    }@else if $btn-type==secundary{
+        &hover{
+            color:$hover-color;
+        }
+    }
+}
+
+
+

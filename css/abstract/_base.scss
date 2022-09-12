@@ -1,0 +1,30 @@
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    }
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url(../../assets/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    place-content: center;
+}
+
+@media(min-width:600px){
+    body{
+        background: url(../../assets/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
